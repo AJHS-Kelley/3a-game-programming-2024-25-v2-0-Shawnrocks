@@ -16,16 +16,20 @@
 #     print(eachFruit)
 
 # continue Keyword -- skips the current iteration and then finishes the loop.
-fruits = ["apple", "banana", "strawberry", "tomato"]
-for eachFruit in fruits:
-    print(eachFruit)
-    if eachFruit == "banana":
-        continue
-    print(eachFruit)
-    # break Keyword -- Immediaetly exit the loop
-fruits = ["apple", "banana", "strawberry", "tomato"]
-for eachFruit in fruits:
-    print(eachFruit)
-    if eachFruit == "banana":
-        break
-    print(eachFruit)
+# fruits = ["apple", "banana", "strawberry", "tomato"]
+# for eachFruit in fruits:
+#     print(eachFruit)
+#     if eachFruit == "banana":
+#         continue
+#     print(eachFruit)
+#     # break Keyword -- Immediaetly exit the loop
+# fruits = ["apple", "banana", "strawberry", "tomato"]
+# for eachFruit in fruits:
+#     print(eachFruit)
+#     if eachFruit == "banana":
+#         break
+#     print(eachFruit)
+
+# for loops using range(). range(x) is EXCLUSIVE, it starts at 0 and ends at x - 1
+for i in range(10): # range is 0 - 9
+    print(i)
