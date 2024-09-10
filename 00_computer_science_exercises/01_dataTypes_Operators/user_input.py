@@ -30,6 +30,7 @@ newNumber = input("Please type a value and press enter.\n")
 #print(int(newNumber)) <-- cannot convert FLOAT to INTEGER 
 print(float(newNumber)) # can conert STRING to FLOAT.
 print(str(newNumber)) # can convert FLOAT to STRING.
+
 # str() will convert the data to a STRING if possible.
 newNumber = 5
 print(newNumber + newNumber) # Should print 10
