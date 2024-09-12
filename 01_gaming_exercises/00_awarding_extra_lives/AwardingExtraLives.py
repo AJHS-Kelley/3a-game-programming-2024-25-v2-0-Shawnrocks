@@ -3,8 +3,19 @@
 
 lives = 3
 score = int(input("Please Enter Score\n"))
-#Allow the user to input the score
+name = "Tyshawn"
 
+print(f"hello {name}! You scored {score} points.\n")
+
+
+
+# CHARACTER REFERENCE 
+# Curly Braces {}
+# Brackets []
+# Angle Bracckets <>
+# Parentheses ()
+
+#Allow the user to input the score
 # If score is 10000 or less
     # Lose a life
 # If score is > 10000 but less than 100001
