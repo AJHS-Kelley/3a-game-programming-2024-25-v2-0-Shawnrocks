@@ -2,7 +2,7 @@
 
 
 lives = 3
-score = input("Please Enter Score")
+score = int(input("Please Enter Score\n"))
 #Allow the user to input the score
 
 # If score is 10000 or less
@@ -17,7 +17,10 @@ score = input("Please Enter Score")
 
 if score >= 100000:   
     print("You receive 2 extra lives.\n")
-    
+elif score >= 10000:
+    print("You recieve 1 extra life.\n")
+else:
+    print("You lose a life.\n")
 
 
 
