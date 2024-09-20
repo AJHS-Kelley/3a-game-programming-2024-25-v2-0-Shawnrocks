@@ -1,4 +1,4 @@
-# Rock, Paper, Scissors by Tyshawn Ricks, v0.1
+# Rock, Paper, Scissors by Tyshawn Ricks, v0.3
 
 # Module Imports
 import random
@@ -15,7 +15,7 @@ cpuChoice = None
 # PLAYER NAME INPUT
 playerName = input("Please type you name and press enter.\n")
 print(f"Hello {playerName}!\n")
-isCorrect = input("is that correct? Type yes or no and press enter.\n")
+isCorrect = input("is that correct? Type yes or no and press enter.\n").lower
 if isCorrect == "yes".lower():
     print(f"Ok {playerChoice}, let's play Rock, Paper, Scissors!\n")
 else:
@@ -52,14 +52,68 @@ while playerScore < 5 and cpuScore < 5:
     playerChoice = input("Please enter rock, paper, or scissors and press enter.\n").lower()
 if playerChoice != "rock" or playerChoice != "paper" or playerChoice != "scissors":
     playerChoice = input("Please enter rock, paper, or scissors and press enter.\n").lower()
-        
+    if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
+     print("You are not following my rules. Please try again.\n")
+     exit()
+     print(f"You have chosen {playerChoice}\n")
+    else:
+     print(f"You have chosen {playerChoice}\n")
+    
+     cpuChoice = random.randint(0,2) # randomly select 0, 1, or 2
+if cpuChoice == 0:
+    cpuChoice = "Rock"
+elif cpuChoice == 1:
+    cpuChoice == "Paper"
+elif cpuChoice == 2:
+    cpuChoice = "Scissor"
+else:
+    print("Bro broke the game.\n")
+    exit()
+print(f"CPU Choice: {cpuChoice}")
+    # compare player choice to cpu choice
+
+    # print the results to the screen
+if playerChoice == "rock" and cpuChoice == "paper":
+    print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+    print("The CPU wins a point.\n")
+    cpuScore += 1
+    #CPU WINS
+elif playerChoice == "rock" and cpuChoice == "scissor":
+    print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+    print("You win a point.\n")
+    playerScore += 1
+#PLAYER wins
+elif playerChoice == "rock" and cpuChoice == "rock":
+   pass
+#DRAW
+elif #PLAYER CHOOSE SCISSORS, CPU CHOOSES ROCK:
+    pass
+elif #PLAYER CHOOSE SCISSORS, CPU CHOOSES ROCK:
+    pass
+elif #PLAYER CHOOSE SCISSORS, CPU CHOOSES ROCK:
+    pass
+elif #PLAYER CHOOSE SCISSORS, CPU CHOOSES ROCK:
+    pass
+elif #PLAYER CHOOSE SCISSORS, CPU CHOOSES ROCK:
+    pass
+elif #PLAYER CHOOSE SCISSORS, CPU CHOOSES ROCK:
+    pass
+elif #PLAYER CHOOSE SCISSORS, CPU CHOOSES ROCK:
+    pass
+elif #PLAYER CHOOSE SCISSORS, CPU CHOOSES ROCK:
+    pass
+elif #PLAYER CHOOSE SCISSORS, CPU CHOOSES ROCK:
+    pass
+elif #PLAYER CHOOSE SCISSORS, CPU CHOOSES ROCK:
+    pass
 
 
 
 
-    # print the current score 
+
+
+
+    # award point to the winner and output results
+# print the current score 
     # let player select rock, paper, scissor
     # let cpu select choice at random
-    # compare player choice to cpu choice
-    # print the results to the screen
-    # award point to the winner and output results
