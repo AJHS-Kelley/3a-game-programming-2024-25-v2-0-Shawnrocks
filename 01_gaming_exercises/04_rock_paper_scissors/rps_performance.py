@@ -88,7 +88,14 @@ while loopCount < loopsReq:
         print("You win a point.\n")
         playerScore += 1
 
-
+print(f"Your Final Score: {playerScore}\n CPU Final Score: {cpuScore}\n")
+if playerScore > cpuScore:
+    print(f"Congratulations, you won\n")
+elif cpuScore > playerScore:
+    print(f"The CPU wins. You get better")
+else:
+    print("Error")
+    exit()
 
 loopCount += 1
 
@@ -105,7 +112,7 @@ loopCount += 1
 rpsTimeStart = time.time()
 rpsTime = rpsTimeStop - rpsTimeStart
 print(f"Number of loops: {loopCount}\n")
-print(f"Execution Time {rpsTime.2f}")
+print(f"Execution Time {rpsTime: .2f}")
 
     # award point to the winner and output results
 # print the current score 
