@@ -20,7 +20,7 @@ rpsTimeStart = time.time() # Returns the number of seconds since Jan 01. 1970 @ 
 while loopCount < loopsReq:
 
 
-    cpuChoice = random.randint(0,3) # randomly select 0, 1, or 2
+    cpuChoice = random.randint(0,2) # randomly select 0, 1, or 2
     if cpuChoice == 0:
         cpuChoice = "rock"
     elif cpuChoice == 1:
@@ -34,7 +34,7 @@ while loopCount < loopsReq:
         # compare player choice to cpu choice
 
         # print the results to the screen
-    playerChoice = random.randint(0,3) # randomly select 0, 1, or 2
+    playerChoice = random.randint(0,2) # randomly select 0, 1, or 2
     if playerChoice == 0:
         playerChoice = "rock"
     elif playerChoice == 1:
@@ -94,6 +94,18 @@ loopCount += 1
 
 
 
+
+
+
+
+
+
+
+
+rpsTimeStart = time.time()
+rpsTime = rpsTimeStop - rpsTimeStart
+print(f"Number of loops: {loopCount}\n")
+print(f"Execution Time {rpsTime.2f}")
 
     # award point to the winner and output results
 # print the current score 
