@@ -16,18 +16,18 @@ cpuChoice = None
 playerName = input("Please type you name and press enter.\n")
 print(f"Hello {playerName}!\n")
 isCorrect = input("is that correct? Type yes or no and press enter.\n").lower
-if isCorrect == "yes".lower():
-    print(f"Ok {playerChoice}, let's play Rock, Paper, Scissors!\n")
-else:
-    playerName = input("Please type you name and press enter.\n")
 
+if isCorrect == "yes":
+    print(f"Ok {playerName}, let's play rock, paper, scissors!\n")
+else :
+    playerName = input("Please Type your name and press enter.\n")
 
 
 
 
 # The rules
-print("""
-Welcome to the Rock, paper, scissor robot!
+print(f"""
+Welcome, {playerName} to the Rock, paper, scissor robot!
 it's time to play rock, paper, scissors
       
 you will play against the CPU. The first player to score 5 points wins.
@@ -52,14 +52,14 @@ while playerScore < 5 and cpuScore < 5:
     playerChoice = input("Please enter rock, paper, or scissors and press enter.\n").lower()
     if playerChoice != "rock" or playerChoice != "paper" or playerChoice != "scissors":
         playerChoice = input("Please enter rock, paper, or scissors and press enter.\n").lower()
-        if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
-     print("You are not following my rules. Please try again.\n")
-     exit()
-     print(f"You have chosen {playerChoice}\n")
-    else:
-     print(f"You have chosen {playerChoice}\n")
+        if playerChoice != "rock" or playerChoice != "paper" or playerChoice != "scissors":
+            print("You are not following my rules. Please try again.\n")
+            exit()
+    print(f"You have chosen {playerChoice}\n")
+else:
+    print(f"You have chosen {playerChoice}\n")
     
-     cpuChoice = random.randint(0,2) # randomly select 0, 1, or 2
+    cpuChoice = random.randint(0,2) # randomly select 0, 1, or 2
     if cpuChoice == 0:
         cpuChoice = "rock"
     elif cpuChoice == 1:
