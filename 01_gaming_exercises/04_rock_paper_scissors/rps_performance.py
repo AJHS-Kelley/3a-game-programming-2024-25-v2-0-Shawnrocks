@@ -24,7 +24,7 @@ while loopCount < loopsReq:
     if cpuChoice == 0:
         cpuChoice = "rock"
     elif cpuChoice == 1:
-        cpuChoice == "paper"
+        cpuChoice = "paper"
     elif cpuChoice == 2:
         cpuChoice = "scissor"
     else:
@@ -38,7 +38,7 @@ while loopCount < loopsReq:
     if playerChoice == 0:
         playerChoice = "rock"
     elif playerChoice == 1:
-        playerChoice == "paper"
+        playerChoice = "paper"
     elif playerChoice == 2:
         playerChoice = "scissor"
     else:

@@ -50,7 +50,7 @@ The CPU will select rock, paper, scissors at random.
 while playerScore < 5 and cpuScore < 5:
     print(f"{playerName} you have {playerScore} points.\nThe CPU has {cpuScore} points.\n")
     playerChoice = input("Please enter rock, paper, or scissors and press enter.\n").lower()
-    if playerChoice != "rock" or playerChoice != "paper" or playerChoice != "scissors":
+    if playerChoice == "rock" or playerChoice == "paper" or playerChoice == "scissors":
         playerChoice = input("Please enter rock, paper, or scissors and press enter.\n").lower()
         if playerChoice != "rock" or playerChoice != "paper" or playerChoice != "scissors":
             print("You are not following my rules. Please try again.\n")
@@ -63,7 +63,7 @@ else:
     if cpuChoice == 0:
         cpuChoice = "rock"
     elif cpuChoice == 1:
-        cpuChoice == "paper"
+        cpuChoice = "paper"
     elif cpuChoice == 2:
         cpuChoice = "scissor"
     else:
