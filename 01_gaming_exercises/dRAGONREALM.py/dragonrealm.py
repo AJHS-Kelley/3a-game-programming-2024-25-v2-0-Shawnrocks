@@ -3,7 +3,7 @@
 
 import random
 import time
-
+hasAxe = False
 def displayIntro():
 
     print('You are in a land full of dragons. In front of you,')
