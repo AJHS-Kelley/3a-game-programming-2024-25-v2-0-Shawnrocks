@@ -7,7 +7,7 @@
 
 import random
 import time
-hasAxe = False
+Axe = False
 def displayIntro():
 
     print('You are in a land full of dragons. In front of you,')
@@ -18,7 +18,7 @@ def displayIntro():
 
 def chooseCave():
     cave = ''
-    while cave != '1' and cave != '2' and cave != 3:
+    while cave != '1' and cave != '2':
         print('Which cave will you go into? (1 or 2)')
         cave = input()
     return cave
@@ -32,14 +32,17 @@ def checkCave(chosenCave):
     print()
     time.sleep(2)
 
-    friendlyCave = random.randint(1, 3)
-
+    friendlyCave = random.randint(1, 4)
+    
     if friendlyCave == 1:
         print("You lose lil bru")
     elif friendlyCave == 2:
         print("Hes still sleep bro")
     elif friendlyCave == 3:
         print("You got destroyed")
+    elif friendlyCave == 4:
+        print(f"do you wish to pick up {Axe}")
+        
 
 
 playAgain = 'yes'
@@ -50,3 +53,4 @@ while playAgain == 'yes' or playAgain == 'y':
     checkCave(caveNumber)
     print('Do you want to play again? (yes or no)')
     playAgain = input()
+    
