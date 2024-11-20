@@ -1,5 +1,9 @@
-# Dragon Realm, <STUDENT_NAME>, v0.0
+# Dragon Realm, <STUDENT_NAME>, v0.0 <-- Update this information. 
 # Based on https://inventwithpython.com/chapter6.html by Al Sweigart
+# Almost no new code added. 
+# Missing the file saving code. 
+# You need to finish by Friday. 
+
 
 import random
 import time
