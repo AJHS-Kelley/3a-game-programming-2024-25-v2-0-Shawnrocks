@@ -3,7 +3,7 @@
 # Almost no new code added. 
 # Missing the file saving code. 
 # You need to finish by Friday. 
-
+# 2024-12-09 -- No new code added. 50%.  Finish and resubmit by 2024-12-16 @ 3:00PM 
 
 import random
 import time
