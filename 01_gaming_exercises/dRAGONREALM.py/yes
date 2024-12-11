@@ -1,0 +1,11 @@
+    safeCave = input(1, 4)
+    
+    if safeCave == 1:
+        print("You lose lil bru")
+    elif safeCave == 2:
+        print("Hes still sleep bro")
+    elif safeCave == 3:
+        print("You got destroyed")
+    elif safeCave == 4:
+        print(f"do you wish to pick up {Axe}")
+        

@@ -32,18 +32,38 @@ def checkCave(chosenCave):
     print()
     time.sleep(2)
 
-    friendlyCave = random.randint(1, 4)
-    
-    if friendlyCave == 1:
-        print("You lose lil bru")
-    elif friendlyCave == 2:
-        print("Hes still sleep bro")
-    elif friendlyCave == 3:
-        print("You got destroyed")
-    elif friendlyCave == 4:
-        print(f"do you wish to pick up {Axe}")
-        
+    hasTorch = input("Do you wish to pick up this torch? Yes or No")
+    if hasTorch == "yes":
+        print("You have picked up the torch")
 
+    safeCave = False
+    if hasTorch == "yes":
+        safeCave == True
+        
+    if hasTorch == "yes":
+        print("You enter this dark and void space with no light how do you wish to go")
+        time.sleep(2)
+        print("You hear something creeping up on you")
+        time.sleep(2)
+        print("What do you wish to do?\nHide?\nRun?\nApproach?")
+        run = input("Do you wish to run away?\n Yes or No").lower
+        if run == "yes":
+            print("you managed to escape from the mysterious being but trip due to having no light")
+        else:
+            print("You hear it get closer")
+            time.sleep(2) 
+            print("Its getting closer and closer")
+            time.sleep(2)
+            print("you feel it breathing on your skin")
+            time.sleep(3)
+            print("It pushes you back and...")
+            alive = random.randint(1, 2)
+            if alive == 1:
+                print("spares you")
+            else:
+                print("Ends you off")        
+        
+    
 
 playAgain = 'yes'
 
