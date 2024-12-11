@@ -16,14 +16,14 @@ def displayIntro():
     print('is greedy and hungry, and will eat you on sight.')
     print()
 
-def chooseCave():
+def choosePlaceToSleep():
     cave = ''
     while cave != '1' and cave != '2':
-        print('Which cave will you go into? (1 or 2)')
+        print('Which place will you sleep? (Cave or Camp)')
         cave = input()
     return cave
 
-def checkCave(chosenCave):
+def checkPlace(chosenCave):
     print('You approach the cave...')
     time.sleep(2)
     print('It is dark and spooky...')
@@ -46,7 +46,7 @@ def checkCave(chosenCave):
         print("You hear something creeping up on you")
         time.sleep(2)
         print("What do you wish to do?\nHide?\nRun?\nApproach?")
-        run = input("Do you wish to run away?\n Yes or No").lower
+        run = input("Do you wish to run away?\n Yes or No")
         if run == "yes":
             print("you managed to escape from the mysterious being but trip due to having no light")
         else:
@@ -69,8 +69,8 @@ playAgain = 'yes'
 
 while playAgain == 'yes' or playAgain == 'y':
     displayIntro()
-    caveNumber = chooseCave()
-    checkCave(caveNumber)
+    caveNumber = choosePlaceToSleep()
+    checkPlace(caveNumber)
     print('Do you want to play again? (yes or no)')
     playAgain = input()
     
