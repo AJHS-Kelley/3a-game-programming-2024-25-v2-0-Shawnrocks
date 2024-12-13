@@ -17,11 +17,11 @@ def displayIntro():
     print()
 
 def choosePlaceToSleep():
-    cave = ''
-    while cave != '1' and cave != '2':
-        print('Which place will you sleep? (Cave or Camp)')
-        cave = input()
-    return cave
+    location = ''
+    while location != 'Cave' and location != 'Tundra':
+        print('Which place will you sleep? (Cave or Tundra)')
+        location = input()
+    return location
 
 def checkPlace(chosenCave):
     print('You approach the cave...')
