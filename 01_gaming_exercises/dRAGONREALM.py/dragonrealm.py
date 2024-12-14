@@ -4,73 +4,92 @@
 # Missing the file saving code. 
 # You need to finish by Friday. 
 # 2024-12-09 -- No new code added. 50%.  Finish and resubmit by 2024-12-16 @ 3:00PM 
-
+    
+    
+    
 import random
 import time
-Axe = False
-def displayIntro():
 
-    print('You are in a land full of dragons. In front of you,')
-    print('you see two caves. In one cave, the dragon is friendly')
-    print('and will share his treasure with you. The other dragon')
-    print('is greedy and hungry, and will eat you on sight.')
-    print()
+def gameOver(reason):
+    "Handles game over and play again logic."
+    print(f"\nGame Over: {reason}")
+    play_again = input("Play again? (yes/no): ").lower()
+    return play_again == "yes"
 
-def choosePlaceToSleep():
-    location = ''
-    while location != 'Cave' and location != 'Tundra':
-        print('Which place will you sleep? (Cave or Tundra)')
-        location = input()
-    return location
-
-def checkPlace(chosenCave):
-    print('You approach the cave...')
-    time.sleep(2)
-    print('It is dark and spooky...')
-    time.sleep(2)
-    print('A large dragon jumps out in front of you! He opens his jaws and...')
-    print()
-    time.sleep(2)
-
-    hasTorch = input("Do you wish to pick up this torch? Yes or No")
-    if hasTorch == "yes":
-        print("You have picked up the torch")
-
-    safeCave = False
-    if hasTorch == "yes":
-        safeCave == True
-        
-    if hasTorch == "yes":
-        print("You enter this dark and void space with no light how do you wish to go")
-        time.sleep(2)
-        print("You hear something creeping up on you")
-        time.sleep(2)
-        print("What do you wish to do?\nHide?\nRun?\nApproach?")
-        run = input("Do you wish to run away?\n Yes or No")
-        if run == "yes":
-            print("you managed to escape from the mysterious being but trip due to having no light")
-        else:
-            print("You hear it get closer")
-            time.sleep(2) 
-            print("Its getting closer and closer")
-            time.sleep(2)
-            print("you feel it breathing on your skin")
-            time.sleep(3)
-            print("It pushes you back and...")
-            alive = random.randint(1, 2)
-            if alive == 1:
-                print("spares you")
+def encounterEnemy(enemy_name):
+    "Handles combat with an enemy."
+    while True:
+        action = input(f"Do you fight the {enemy_name} or flee? (fight/flee): ").lower()
+        if action == "fight":
+            outcome = random.choice(["win", "lose"])
+            if outcome == "win":
+                print(f"You bravely defeat the {enemy_name}!")
+                return True  
             else:
-                print("Ends you off")        
-        
-    
+                print(f"The {enemy_name} defeats you.")
+                return False  
+        elif action == "flee":
+            print(f"You narrowly escape the {enemy_name}, but you're still lost.")
+            return True
+        else:
+            print("Invalid choice. Please enter 'fight' or 'flee'.")
 
-playAgain = 'yes'
+def desertAdventure():
+    "The desert adventure path."
+    print("\nYou are in a scorching desert. The sun beats down mercilessly.")
+    print("You see a shimmering oasis in the distance.")
+    while True:
+        action = input("Do you approach the oasis? (yes/no): ").lower()
+        if action == "yes":
+            print("You stumble upon the oasis. It's a mirage!")
+            print("A giant Sandworm emerges from the sand!")
+            return encounterEnemy("Sandworm") 
+        elif action == "no":
+            print("You wisely avoid the mirage and continue walking. You find a small, withered cactus.")
+           
+            return True 
+        else:
+            print("Invalid choice. Please enter 'yes' or 'no'.")
 
-while playAgain == 'yes' or playAgain == 'y':
-    displayIntro()
-    caveNumber = choosePlaceToSleep()
-    checkPlace(caveNumber)
-    print('Do you want to play again? (yes or no)')
-    playAgain = input()
+def tundraAdventure():
+    "The tundra adventure path."
+    print("\nYou are in a freezing tundra. The wind howls fiercely.")
+    print("You see a faint light in the distance.")
+    while True:
+        action = input("Do you approach the light? (yes/no): ").lower()
+        if action == "yes":
+            print("You find a small, abandoned cabin.")
+            print("A Yeti bursts out of the cabin!")
+            return encounterEnemy("Yeti") 
+        elif action == "no":
+            print("You decide to avoid the light and keep searching for shelter. You find a small cave.")
+           
+            return True 
+        else:
+            print("Error")
+
+def game():
+    "Main game function."
+    playing = True
+    while playing:
+        print("\nWelcome to Choose Your Own Adventure!")
+        while True: 
+            choice = input("Where do you want to go? (desert/tundra): ").lower()
+            if choice == "desert":
+                player_survived = desertAdventure()
+                break
+            elif choice == "tundra":
+                player_survived = tundraAdventure()
+                break
+            else:
+                print("Error")
+
+        if not player_survived: 
+            playing = gameOver("You lost bro.")
+        else:
+            playing = gameOver("You survived... for now.") 
+
+
+if __name__ == "__main__":
+    game()
     
